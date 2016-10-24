@@ -1,8 +1,4 @@
-//
-//  main.cpp
-//  task2
-//
-//  Created by Максим Шилов on 24.10.16.
+//  Created by Максим Шилов, assisted by Анастасия Бебех on 24.10.16.
 //  Copyright © 2016 Максим Шилов. All rights reserved.
 //
 
