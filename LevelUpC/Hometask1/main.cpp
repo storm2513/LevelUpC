@@ -62,7 +62,7 @@ int main() {
     cout << "Изменённая матрица C: " << endl;
     for (int jind = 0; jind < i; jind++){
         for (int mind = 0; mind < m; mind++){
-            c[jind][mind] = int(c[jind][mind]) % 2 == 0;
+            c[jind][mind] = int(c[jind][mind]) % 2;
             cout << c[jind][mind] << "  ";
         }
         cout << endl;
