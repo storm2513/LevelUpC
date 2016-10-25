@@ -7,12 +7,11 @@
 using namespace std;
 
 int main() {
-    int i, j;
+    int i, j, m;
     cout << "Укажи размер матрицы A. Количество строк: ";
     cin >> i;
     cout << "Отлично, теперь введи количество столбцов: ";
     cin >> j;
-    int m;
     cout << "Введи количество столбцов матрицы B: ";
     cin >> m;
     double a[i][j];
@@ -63,7 +62,7 @@ int main() {
     cout << "Изменённая матрица C: " << endl;
     for (int jind = 0; jind < i; jind++){
         for (int mind = 0; mind < m; mind++){
-            c[jind][mind] = (int(c[jind][mind]) % 2 == 0) ? 0 : 1;
+            c[jind][mind] = int(c[jind][mind]) % 2 == 0;
             cout << c[jind][mind] << "  ";
         }
         cout << endl;
