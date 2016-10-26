@@ -1,8 +1,4 @@
-//
-//  main.cpp
-//  task2
-//
-//  Created by Максим Шилов on 24.10.16.
+//  Created by Максим Шилов, assisted by Анастасия Бебех on 24.10.16.
 //  Copyright © 2016 Максим Шилов. All rights reserved.
 //
 
@@ -11,13 +7,12 @@
 using namespace std;
 
 int main() {
-    int i, j;
-    cout << "Укажите размер матрицы A. Количество строк: ";
+    int i, j, m;
+    cout << "Укажи размер матрицы A. Количество строк: ";
     cin >> i;
-    cout << "Отлично, теперь введите количество столбцов: ";
+    cout << "Отлично, теперь введи количество столбцов: ";
     cin >> j;
-    int m;
-    cout << "Введите количество столбцов матрицы B: ";
+    cout << "Введи количество столбцов матрицы B: ";
     cin >> m;
     double a[i][j];
     double b[j][m];
@@ -67,7 +62,7 @@ int main() {
     cout << "Изменённая матрица C: " << endl;
     for (int jind = 0; jind < i; jind++){
         for (int mind = 0; mind < m; mind++){
-            c[jind][mind] = (int(c[jind][mind]) % 2 == 0) ? 0 : 1;
+            c[jind][mind] = int(c[jind][mind]) % 2;
             cout << c[jind][mind] << "  ";
         }
         cout << endl;
