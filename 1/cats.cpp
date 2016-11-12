@@ -160,12 +160,12 @@ void enterCat(Cat* &catArray, int i){
 }
 
 Cat* addCat(Cat catArray[], int count){
-    Cat* temp = new Cat[count + 1];
-    for (int i = 0; i < count; i++){
-    	temp[i] = catArray[i];
-    }
-    delete [] catArray;
-    return temp;
+	Cat* temp = new Cat[count + 1];
+	for (int i = 0; i < count; i++){
+		temp[i] = catArray[i];
+	}
+	delete [] catArray;
+	return temp;
 }
 
 Cat* deleteCat(Cat catArray[], int count){
@@ -181,8 +181,8 @@ Cat* deleteCat(Cat catArray[], int count){
 	    	j++;
 	  	temp[i] = catArray[j];
 	}
-  delete [] catArray;
-  return temp;
+	delete [] catArray;
+	return temp;
 }
 
 void showCats(Cat* catArray, int count){
@@ -258,33 +258,33 @@ int main(){
 			case 1:
 				catArray = addCat(catArray, count);
 				enterCat(catArray, count);
-		    getCatInfo(catArray[count]);
-		    count++;
-		    break;
-		    case 2:
-			    if(count == 0){
-			    	cout << "Котики отсутствуют :(\n";
-			    	break;
-			    }
-		        catArray = deleteCat(catArray, count);
-		        count--;
-		        break;
-		    case 3:
-		        editCat(catArray);
-		        break;
-		    case 4:
-		        getCatById(catArray, count);
-		        break;
-		    case 5:
-		        if(count == 0){
-			    	cout << "Котики отсутствуют :(\n";
-			    	break;
-			    }
-		        showCats(catArray, count);
-		        break;
-		    case 6:
-		        exit(0);
-		        break;
+				getCatInfo(catArray[count]);
+				count++;
+				break;
+			case 2:
+				if(count == 0){
+					cout << "Котики отсутствуют :(\n";
+					break;
+				}
+				catArray = deleteCat(catArray, count);
+				count--;
+				break;
+			case 3:
+				editCat(catArray);
+				break;
+			case 4:
+				getCatById(catArray, count);
+				break;
+			case 5:
+				if(count == 0){
+				    	cout << "Котики отсутствуют :(\n";
+				    	break;
+				    }
+				showCats(catArray, count);
+				break;
+			case 6:
+				exit(0);
+				break;
 		}
 	}
 return 0;
